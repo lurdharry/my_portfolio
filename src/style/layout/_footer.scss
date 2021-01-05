@@ -1,18 +1,203 @@
 .footer {
-  background-color: $dark-grey;
-  color: $white-color;
-  padding: 4.8rem 0;
+  background-color: $primary-color !important;
+  color: $secondary-color;
+  padding: 3rem 0 1rem 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  .big-circle {
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 60rem;
+    border: 1px solid $secondary-color;
+    left: -30rem;
+    bottom: -30rem;
+    opacity: 0.2 !important;
+
+    @include respond(phone) {
+      width: 30rem;
+      height: 30rem;
+      left: -10rem;
+      bottom: -7rem;
+    }
+
+    &:hover {
+      border: 2px solid $secondary-color;
+    }
+  }
+
+  .vertical {
+    height: 2rem;
+    align-self: center;
+    margin: 3rem auto;
+    align-self: center;
+    display: inline-flex;
+    margin-bottom: 8rem;
+
+    a {
+    }
+    .buttonTwo {
+      position: relative;
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+      align-items: center;
+      padding-right: 1rem;
+
+      margin-left: 1.9rem;
+      font-size: 1.2rem;
+      font-family: $fontOne;
+      text-transform: uppercase;
+      color: $secondary-color;
+      cursor: pointer;
+      margin: 0 auto;
+      font-weight: 200;
+      margin-bottom: 10rem;
+
+      // justify-content: center;
+
+      &::before {
+        position: absolute;
+        content: '';
+        border-style: solid;
+        border-width: 3px 0 3px 5px;
+        border-color: transparent transparent transparent $secondary-color;
+
+        justify-self: center;
+        right: 0.5rem;
+        margin-bottom: 0.05rem;
+      }
+
+      &::after {
+        content: '';
+        width: 0.7rem;
+        margin-left: 0.5rem;
+        height: 0.2rem;
+        background-color: $secondary-color;
+        align-self: center;
+        transition: all 0.3s ease;
+        margin-bottom: 0.05rem;
+      }
+
+      &:hover::after {
+        width: 3.5rem;
+        margin-left: 0.1rem;
+      }
+
+      .circle {
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 2.3rem;
+        background-color: $secondary-color;
+        position: absolute;
+        z-index: -1;
+        left: -1rem;
+        opacity: 0.2;
+      }
+    }
+  }
+  .available {
+    font-family: $fontOne;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: $secondary-color;
+    margin-top: 2rem;
+  }
+
+  .together {
+    font-family: $fontOne;
+    font-size: 4rem;
+    font-weight: 400;
+    color: $secondary-color;
+    position: relative;
+    margin-top: 8rem;
+  }
+  .lined-circle {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 15rem;
+    overflow: hidden;
+    right: 37vw;
+    transform: rotate(-35deg);
+    top: 10vh;
+
+    @include respond(phone) {
+      width: 10rem;
+      height: 10rem;
+      right: 2rem;
+    }
+
+    .hr-line {
+      width: 20rem;
+      height: 0.2rem;
+      margin: 0.3rem;
+      padding: 0rem;
+      background-color: rgba($secondary-color, 0.5);
+      margin-left: -1rem;
+      opacity: 0.5;
+
+      &:hover {
+        background-color: rgba($secondary-color, 1);
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-family: $fontTwo;
+    font-weight: light;
+    text-transform: uppercase;
+    line-height: normal;
+    color: $secondary-color;
+
+    .line {
+      width: 0.08rem;
+      height: 1.3rem;
+      background-color: $secondary-color;
+      margin: 0 0.7rem 0 1.7rem;
+      opacity: 0.4;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 4rem;
+        height: 3rem;
+        margin: 0;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
 
   @include respond(phone) {
     border: 0px;
   }
 
   &__text {
-    color: darken(white, 50%);
+    color: darken($secondary-color, 50%);
     font-size: 1.3rem;
 
     a {
-      color: darken(white, 50%);
+      color: darken($secondary-color, 50%);
       font-size: 1.3rem;
       transition: all 0.4s;
       display: inline-block;
@@ -36,30 +221,8 @@
   }
 }
 
-.social-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $white-color;
-    font-size: 3rem;
-    width: 5rem;
-    height: 5rem;
-    margin: $default-font-size $default-font-size;
-    transition: all 0.2s ease-in;
-
-    &:hover {
-      transform: translateY(-2px);
-    }
-  }
-}
-
 .back-to-top i {
-  color: $white-color;
+  color: $secondary-color;
   margin: 1rem 0 $default-font-size;
   transition: all 0.2s ease-in;
   cursor: pointer;

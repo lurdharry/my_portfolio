@@ -29,7 +29,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </PortfolioProvider>
   );

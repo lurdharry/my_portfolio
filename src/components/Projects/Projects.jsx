@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
+import { Link } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+import projectDetails from '../../mock/details';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -26,57 +27,59 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Projects" />
-          {projects.map((project) => {
+          <h2 className="section-title-alt">My Works</h2>
+
+          {projectDetails.map((project, index) => {
             const { title, info, info2, url, repo, img, id } = project;
 
             return (
               <Row key={id}>
-                <Col lg={4} sm={12}>
+                <Col lg={6} sm={12}>
                   <Fade
                     left={isDesktop}
                     bottom={isMobile}
-                    duration={1000}
-                    delay={500}
+                    duration={800}
+                    delay={300}
                     distance="30px"
                   >
                     <div className="project-wrapper__text">
                       <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
-                      <div>
-                        <p>
+                      <div className="info">
+                        <p className="info1">
                           {info ||
                             'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
                         </p>
-                        <p className="mb-4">{info2 || ''}</p>
-                      </div>
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a>
+                        <p className="mb-4 info2">{info2 || ''}</p>
 
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn text-color-main"
-                          href={repo}
-                        >
-                          Source Code
-                        </a>
-                      )}
+                        <span className=" vertical">
+                          <Link to={`/${title}/`} target="_blank" rel="noopener noreferrer">
+                            <div className="buttonTwo">
+                              <div className="circle" />
+                              More Details
+                            </div>
+                          </Link>
+                        </span>
+
+                        {repo && (
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-btn text-color-main"
+                            href={repo}
+                          >
+                            Source Code
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </Fade>
                 </Col>
-                <Col lg={8} sm={12}>
+                <Col lg={6} sm={12}>
                   <Fade
                     right={isDesktop}
                     bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
+                    duration={800}
+                    delay={300}
                     distance="30px"
                   >
                     <div className="project-wrapper__image">
@@ -86,23 +89,14 @@ const Projects = () => {
                         aria-label="Project Link"
                         rel="noopener noreferrer"
                       >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
-                          </div>
-                        </Tilt>
+                        <div data-tilt className="thumbnail rounded">
+                          <ProjectImg
+                            classNam="project-image-base"
+                            alt={title}
+                            filename={img}
+                            height="400px"
+                          />
+                        </div>
                       </a>
                     </div>
                   </Fade>

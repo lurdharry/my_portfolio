@@ -2,16 +2,18 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
-  lang: '', // e.g: en, es, fr, jp
-  description: '', // e.g: Welcome to my website
+  title: 'Ridwan Ajibola | Front-end Developer', // e.g: 'Name | Developer'
+  lang: 'en', // e.g: en, es, fr, jp
+  description: `Hi, I\'m Ridwan Ajibola. A react and react-native developer focused on building
+  responsive cross-platform mobile applications that look the same across various
+  devices and have buttery-smooth user experience.`, // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
-  title: '',
-  name: '',
-  subtitle: '',
+  title: 'Hi, my name is',
+  name: 'Ridwan Ajibola',
+  subtitle: "I'm a Mobile Developer",
   cta: '',
 };
 
@@ -28,31 +30,63 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    img: 'lets-eat-base.png',
+    title: 'Fit App',
+    info:
+      'This is a food-delivery app that had a market Australia, and wanted to expand to the Philippines',
+    info2:
+      "I was responsible for modifying and deploying the Swift app to have more features and meet Apple's requirements",
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: ' ', // if no repo, the button will not show up.
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    img: 'FitApp/1.png',
+    title: 'HLW Mobile',
+    info:
+      'This is a react-native app for a US-based architecture firm for their prospective clients to analyze and learn about structural ratings',
+    info2:
+      'I was responsible for developing the app, deploying the Android apk and iOS builds (via tesflight) for QA, and also writing extensive tests with jest and detox',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: ' ', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'sterling-base.png',
+    title: 'Sterling OnePay',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '', // if no repo, the button will not show up
   },
+  {
+    id: nanoid(),
+    img: 'clane-app-base2.png',
+    title: 'Clane app',
+    info: '',
+    info2: '',
+    url: '',
+    repo: '', // if no repo, the button will not show up
+  },
+
+  // {
+  //   id: nanoid(),
+  //   img: 'project.jpg',
+  //   title: 'Edacious',
+  //   info: '',
+  //   info2: '',
+  //   url: '',
+  //   repo: ' ', // if no repo, the button will not show up
+  // },
+  // {
+  //   id: nanoid(),
+  //   img: 'project.jpg',
+  //   title: 'Fitapp',
+  //   info: '',
+  //   info2: '',
+  //   url: '',
+  //   repo: ' ', // if no repo, the button will not show up
+  // },
 ];
 
 // CONTACT DATA
