@@ -3,12 +3,6 @@ html {
 }
 
 body {
-  font-family: $fontTwo;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
