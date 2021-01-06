@@ -1,7 +1,7 @@
 #contact {
   background-color: $red;
 
-  padding: 7rem 0 10rem 0;
+  padding: 10rem 0 10rem 0;
   margin-bottom: -1px;
   color: $white-color;
   font-family: $fontOne;
@@ -16,8 +16,8 @@
   .title {
     font-size: 4rem;
     font-weight: bold;
-    line-height: 3.8rem;
-    letter-spacing: 0.28rem;
+    line-height: 4rem;
+    letter-spacing: 0.45rem;
   }
 
   .subtitle {
@@ -28,7 +28,7 @@
   }
 
   .button {
-    width: 26rem;
+    width: 29rem;
     height: 7rem;
     border: 2px solid $white-color;
     display: flex;
@@ -48,7 +48,7 @@
     }
 
     .fa {
-      padding: 0 4.5rem 0 2rem;
+      padding: 0 5.5rem 0 2rem;
       font-size: 2rem;
 
       &::after {

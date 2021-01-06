@@ -24,10 +24,10 @@ const Contact = () => {
         </div>
 
         <div className="links">
-          {Data.map((link) => {
+          {Data.map(({ name, address }) => {
             return (
               <>
-                <a href="#">{link}</a>
+                <a href={address}>{name}</a>
                 <div className="line" />
               </>
             );
@@ -40,4 +40,10 @@ const Contact = () => {
 
 export default Contact;
 
-const Data = ['TWITTER', 'DRIBBBLE', 'behance', 'facebook', 'instagram'];
+const Data = [
+  { name: 'TWITTER', address: '#' },
+  { name: 'DRIBBBLE', address: '#' },
+  { name: 'behance', address: '#' },
+  { name: 'facebook', address: '#' },
+  { name: 'instagram', address: '#' },
+];
