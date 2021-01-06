@@ -22,9 +22,22 @@ const Contact = () => {
           <i className={`fa fa-${name || 'send'} fa-inverse`} />
           GET IN TOUCH
         </div>
+
+        <div className="links">
+          {Data.map((link) => {
+            return (
+              <>
+                <a href="#">{link}</a>
+                <div className="line" />
+              </>
+            );
+          })}
+        </div>
       </Container>
     </section>
   );
 };
 
 export default Contact;
+
+const Data = ['TWITTER', 'DRIBBBLE', 'behance', 'facebook', 'instagram'];

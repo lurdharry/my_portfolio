@@ -38,10 +38,67 @@
     margin: auto;
     font-size: 1.7rem;
     border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    &:hover {
+      background-color: $white-color;
+      color: $red;
+    }
 
     .fa {
       padding: 0 4.5rem 0 2rem;
       font-size: 2rem;
+
+      &::after {
+        content: '';
+        width: 26rem;
+        height: 26rem;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8.5rem;
+
+    .line {
+      width: 0.5px;
+      height: 1.5rem;
+      background-color: white;
+      margin: 0 2rem;
+      opacity: 0.3;
+      border-bottom: 1px solid transparent;
+
+      &:last-child {
+        display: none;
+      }
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      line-height: 1.2rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      border-bottom: 1px solid transparent;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        border-bottom: 1px solid white;
+      }
     }
   }
 
