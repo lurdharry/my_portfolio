@@ -11,22 +11,17 @@ const Contact = () => {
   return (
     <section id="contact">
       <Container>
-        <Title title="Contact" />
-        <Fade bottom duration={1000} delay={800} distance="30px">
-          <div className="contact-wrapper">
-            <p className="contact-wrapper__text">
-              {cta || 'Would you like to work with me? Awesome!'}
-            </p>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-btn cta-btn--resume"
-              href={email ? `mailto:${email}` : 'https://github.com/cobidev/react-simplefolio'}
-            >
-              {btn || "Let's Talk"}
-            </a>
-          </div>
-        </Fade>
+        <div className="title">OK, LET’S CREATE</div>
+        <div className="title">SOMETHING GREAT</div>
+        <div className="subtitle">
+          If you like my work and have some cool project to work on, just send me direct message or
+          contact me through social sites listed below.
+        </div>
+
+        <div className="button">
+          <i className={`fa fa-${name || 'send'} fa-inverse`} />
+          GET IN TOUCH
+        </div>
       </Container>
     </section>
   );

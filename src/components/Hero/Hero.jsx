@@ -1,8 +1,11 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
+import Bounce from 'react-reveal/Bounce';
+import Jump from 'react-reveal/Jump';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import reactLogo from '../../images/reactjs-icon.svg';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -22,26 +25,16 @@ const Header = () => {
   }, []);
 
   return (
-    <section id="hero" className="jumbotron">
-      <Container>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
-          <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
-            <span className="text-color-main">{name || 'Your Name'}</span>
-            <br />
-            {subtitle || "I'm the Unknown Developer."}
-          </h1>
-        </Fade>
-        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
-          <p className="hero-cta">
-            <span className="cta-btn cta-btn--hero">
-              <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
-              </Link>
-            </span>
-          </p>
-        </Fade>
-      </Container>
+    <section id="hero">
+      <div className="container">
+        <h1 className="title">PAVEL HUZA</h1>
+        <p className="subtitle">
+          I'm a Czech Republic based web designer & front‑end developer focused on crafting clean &
+          user‑friendly experiences.
+        </p>
+
+        <span className="hero-button">Check my work</span>
+      </div>
     </section>
   );
 };
