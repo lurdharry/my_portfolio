@@ -26,11 +26,18 @@ const About = () => {
   return (
     <section id="about">
       <Container>
-        <h1 className="title">PORTFOLIO</h1>
+        <h1 className="title">About me</h1>
         <p>
-          Below you can see some projects I've been working on lately. I divide each project into
-          four follow-up areas: comprehensive research, wireframing, design & development. This
-          process allows me to create great product with client goals in mind.
+          I'm web designer & front-end developer with 7 years of professional experience. I'm
+          interested in all kinds of visual communication, but my major focus is on designing web,
+          mobile & tablet interfaces. I also have skills in other fields like branding, icon design
+          or web development.
+        </p>
+
+        <p>
+          Earlier I was full-time freelancer for 6 years behind my studio Precise Design. Currently
+          I'm working for little overgrown czech “start-up” called Heureka.cz Restu.cz as a Senior
+          UI/UX designer Product designer.
         </p>
       </Container>
     </section>

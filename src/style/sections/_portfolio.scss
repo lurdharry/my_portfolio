@@ -1,36 +1,22 @@
-#about {
-  min-height: 60vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-bottom: 0px;
-  font-weight: 400;
-  color: $white-color;
-  justify-content: center;
-  margin-bottom: 0;
+#portfolio {
+  background-color: $secondary-color;
+  color: $primary-color;
+  border-top: 0px;
+  position: relative;
   font-family: $fontOne;
-  background: linear-gradient(to right, rgba(#0d7769, 0.8), rgba(#0d7769, 0.8)),
-    url(https://picsum.photos/1280/853/?random=1) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  padding: 11rem 0;
 
   .title {
     font-size: 4rem;
     letter-spacing: 0.5rem;
     margin-bottom: 2rem;
-    text-transform: uppercase;
   }
 
   p {
     font-size: 2.2rem;
     font-family: $fontTwo;
-    padding: 0 -2rem;
-  }
-
-  p:nth-child(3) {
-    margin-top: 3rem;
+    padding: 0 5rem;
+    opacity: 0.6;
   }
 
   #icon-container {
