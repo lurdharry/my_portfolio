@@ -13,39 +13,24 @@ const Footer = () => {
 
   return (
     <footer className="footer navbar-static-bottom">
-      <Container>
-        <span className="back-to-top">
-          <Link to="hero" smooth duration={1000}>
-            <i className="fa fa-angle-up fa-2x" aria-hidden="true" />
-          </Link>
-        </span>
-        <div className="social-links">
-          {networks &&
-            networks.map((network) => {
-              const { id, name, url } = network;
-              return (
-                <a
-                  key={id}
-                  href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  aria-label={name}
-                >
-                  <i className={`fa fa-${name || 'refresh'} fa-inverse`} />
-                </a>
-              );
-            })}
+      {/* <Container> */}
+      <div className="head">© 2013 PAVEL HUZA . MADE IN CZECH REPUBLIC</div>
+      <div className="flex">
+        <div className="button button__1">
+          <i className={`fa fa-${name || 'twitter'} fa-inverse`} />
+          follow me on twitter
         </div>
-        <hr />
-        <p className="footer__text">
-          © {new Date().getFullYear()} - Template developed by{' '}
-          <a href="https://github.com/cobidev" target="_blank" rel="noopener noreferrer">
-            Jacobo Martínez
-          </a>
-        </p>
-
-        {isEnabled && <GithubButtons />}
-      </Container>
+        <div className="button button__2">
+          <i className={`fa fa-${name || 'dribbble'} fa-inverse`} />
+          follow me on dribbble
+        </div>
+      </div>
+      <div className="details">
+        This site was built with great tools like Photoshop, Sublime Text 2 & Codekit. Font used in
+        headlines is Brandon Grotesque, font in body copy is FF Meta Serif Web Pro. Both fonts are
+        served up via Typekit.
+      </div>
+      {/* </Container> */}
     </footer>
   );
 };

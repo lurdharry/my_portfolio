@@ -1,0 +1,94 @@
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  z-index: 1000;
+  padding: 0 7.8rem;
+  height: 93px;
+  top: 0;
+  color: $red;
+  transition: height 0.5s ease-in-out;
+
+  .logo {
+    width: 68px;
+    height: 68px;
+    border-radius: 5rem;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    transform: rotate(15deg);
+    transition: all 0.25s ease-in-out;
+    font-size: 3rem;
+
+    &:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .option {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0 3rem;
+      font-size: 1.4rem;
+      border-bottom: 3px solid transparent;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        border-bottom-color: white;
+      }
+    }
+  }
+}
+
+.sticky {
+  //   background-color: white;
+  color: $red;
+
+  .logo {
+  }
+  .flex {
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: -19 !important;
+      animation: mymove 0.5s ease-in-out;
+
+      @keyframes mymove {
+        from {
+          clip-path: inset(0 0 100% 0);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+    }
+
+    .option {
+      color: $red !important;
+      height: 90px !important;
+
+      &:hover {
+        border-bottom-color: $red !important;
+      }
+    }
+  }
+}

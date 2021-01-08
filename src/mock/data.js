@@ -28,27 +28,30 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'restu-mobile-large.jpg',
+    title: 'Heureka mobile experience',
+    info:
+      "With team at Heureka we are preparing new mobile experience for our site. I'm responsible for UI / UX & interaction design.",
     info2: '',
     url: '',
     repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'restu-mobile-large.jpg',
     title: '',
-    info: '',
+    info:
+      "With team at Heureka we are preparing new mobile experience for our site. I'm responsible for UI / UX & interaction design.",
     info2: '',
     url: '',
     repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
+    img: 'restu-mobile-large.jpg',
+    title: 'Restu mobile site',
+    info:
+      'For czech startup Restu.cz I created mobile version of their site. I was responsible for UI design, interactions & front-end development.',
     info2: '',
     url: '',
     repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up

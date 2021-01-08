@@ -9,69 +9,144 @@
     padding-top: 5rem;
   }
 
-  .project-wrapper {
-    margin-bottom: 15rem;
-
-    @include respond(phone) {
-      margin-bottom: 0rem;
-    }
-
-    .row {
-      margin-bottom: 8rem;
-
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
-    }
+  .flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 12rem 2.5rem 10rem 2rem;
+    font-family: $fontOne;
 
     &__text {
+      width: 28%;
       text-align: left;
 
-      @include respond(phone) {
-        margin-bottom: 2.5rem !important;
-      }
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
-      }
+      .button-container {
+        display: flex;
+        margin-top: 3rem;
 
-      &-title {
-        font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+        .button {
+          width: 19rem;
+          height: 4.5rem;
+          border: 2px solid $red;
+          display: grid;
+          place-items: center;
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          margin-right: 1rem;
+          border-radius: 0.45rem;
+          border-color: $red;
+          color: $red;
+          transition: all 0.5s ease-in-out;
 
-        @include respond(phone) {
-          font-size: 2rem;
+          &:hover {
+            background-color: $red;
+            color: $white-color;
+          }
+
+          // &__1 {
+          // }
+          // &__2 {
+          //   border-color: #c5c5c5;
+          //   color: #c5c5c5;
+          // }
         }
       }
 
-      & p > a {
-        color: $secondary-color;
+      .title {
+        font-size: 3rem;
+        font-weight: 500;
+        padding-bottom: 2.5rem;
+        color: $dark-grey;
+      }
+
+      .line {
+        width: 13rem;
+        height: 0.5px;
+        background-color: #c5c5c5;
+        margin-bottom: 3.2rem;
+      }
+
+      .info {
+        font-family: $fontTwo;
+        font-size: 2.1rem;
+        line-height: 3rem;
+        color: #706f6f;
       }
     }
 
     &__image {
-      width: 90%;
-      margin: 0 auto;
+      width: 60%;
 
-      @include respond(tab-land) {
+      .project-image-base {
         width: 100%;
-        margin: 0;
-      }
-
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
-
-        @include respond(phone) {
-          border: 1px solid #d2d2d2;
-          box-shadow: none;
-          margin-bottom: 3.2rem;
-        }
+        background-color: $red;
       }
     }
   }
+
+  // .project-wrapper {
+  //   margin-bottom: 15rem;
+
+  //   @include respond(phone) {
+  //     margin-bottom: 0rem;
+  //   }
+
+  //   .row {
+  //     margin-bottom: 8rem;
+
+  //     @include respond(phone) {
+  //       margin-bottom: 4rem;
+  //     }
+  //   }
+
+  //   &__text {
+  //     text-align: left;
+
+  //     @include respond(phone) {
+  //       margin-bottom: 2.5rem !important;
+  //     }
+  //     @include respond(tab-land) {
+  //       margin-bottom: 4.8rem;
+  //     }
+
+  //     &-title {
+  //       font-weight: bold;
+  //       margin-bottom: 1.8rem;
+  //       font-size: $mid-font-size;
+
+  //       @include respond(phone) {
+  //         font-size: 2rem;
+  //       }
+  //     }
+
+  //     & p > a {
+  //       color: $secondary-color;
+  //     }
+  //   }
+
+  //   &__image {
+  //     width: 90%;
+  //     margin: 0 auto;
+
+  //     @include respond(tab-land) {
+  //       width: 100%;
+  //       margin: 0;
+  //     }
+
+  //     & .thumbnail {
+  //       border: none;
+  //       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  //       transition: all 0.2s ease-out;
+  //       box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  //       transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
+  //         0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  //       @include respond(phone) {
+  //         border: 1px solid #d2d2d2;
+  //         box-shadow: none;
+  //         margin-bottom: 3.2rem;
+  //       }
+  //     }
+  //   }
+  // }
 }
