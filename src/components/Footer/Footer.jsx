@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-scroll';

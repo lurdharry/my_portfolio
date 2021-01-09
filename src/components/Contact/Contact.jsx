@@ -1,12 +1,19 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-restricted-globals */
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
+
+const Data = [
+  { name: 'TWITTER', address: '#' },
+  { name: 'DRIBBBLE', address: '#' },
+  { name: 'behance', address: '#' },
+  { name: 'facebook', address: '#' },
+  { name: 'instagram', address: '#' },
+];
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);
-  const { cta, btn, email } = contact;
 
   return (
     <section id="contact">
@@ -39,11 +46,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-const Data = [
-  { name: 'TWITTER', address: '#' },
-  { name: 'DRIBBBLE', address: '#' },
-  { name: 'behance', address: '#' },
-  { name: 'facebook', address: '#' },
-  { name: 'instagram', address: '#' },
-];
